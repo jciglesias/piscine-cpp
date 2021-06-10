@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/06/09 13:44:39 by jiglesia          #+#    #+#             //
-//   Updated: 2021/06/09 14:12:02 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/06/10 21:07:12 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -42,5 +42,6 @@ int main(int argc, char **argv)
 	}
 	else
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+	std::cout << '\n';
 	return 0;
 }
