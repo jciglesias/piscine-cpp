@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/06/09 14:39:43 by jiglesia          #+#    #+#             //
-//   Updated: 2021/06/14 19:55:20 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/06/14 20:10:22 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -20,6 +20,8 @@ void	add_contact(Book *book, int *i)
 		book[*i] = Book(*i);
 		(*i)++;
 	}
+	else
+		std::cout << "Max capacity reached\n";
 }
 
 void	search_contact(Book *book, int *i)

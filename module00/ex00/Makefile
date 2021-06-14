@@ -6,7 +6,7 @@
 #    By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/04 22:48:40 by jiglesia          #+#    #+#              #
-#    Updated: 2021/06/09 13:57:58 by jiglesia         ###   ########.fr        #
+#    Updated: 2021/06/14 20:06:04 by jiglesia         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -30,7 +30,7 @@ CFLAGS		=
 CFLAGS		=	-Wall -Wextra -Werror -ansi -pedantic -g
 	endif
 else
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 endif
 
 CC			=	/usr/bin/clang++
