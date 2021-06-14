@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/06/09 14:39:43 by jiglesia          #+#    #+#             //
-//   Updated: 2021/06/14 02:09:09 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/06/14 19:55:20 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -30,13 +30,15 @@ void	search_contact(Book *book, int *i)
 	if (*i > 0)
 	{
 		j = 0;
-		std::cout << " ___________________________________________" << std::endl;
+		std::cout << "┌───────────────────────────────────────────┐\n";
+		std::cout << "|     index|first name| last name|  nickname|\n";
+		std::cout << "|-------------------------------------------|" << std::endl;
 		while (j < *i)
 		{
 			book[j].display(j + 1);
 			j++;
 		}
-		std::cout << " -------------------------------------------" << std::endl;
+		std::cout << "└───────────────────────────────────────────┘\n";
 		std::cout << "Enter index: ";
 		std::cin >> index;
 		std::cin.ignore();
