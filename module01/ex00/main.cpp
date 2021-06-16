@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/06/16 14:35:36 by jiglesia          #+#    #+#             //
-//   Updated: 2021/06/16 18:30:27 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/06/16 18:48:19 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -44,7 +44,7 @@ void	newpony(void)
 		std::cin.ignore();
 		if (std::cin.fail())
 		{
-			std::cout << "Wrong height\n";
+			std::cout << "Wrong height, set to default (0)\n";
 			std::cin.clear();
 			std::cin.ignore(256, '\n');
 			height = 0;
@@ -60,7 +60,7 @@ void	newpony(void)
 		std::cin.ignore();
 		if (std::cin.fail())
 		{
-			std::cout << "Wrong height\n";
+			std::cout << "Wrong height, set to default (0)\n";
 			std::cin.clear();
 			std::cin.ignore(256, '\n');
 			height = 0;
