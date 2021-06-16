@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/06/11 19:20:17 by jiglesia          #+#    #+#             //
-//   Updated: 2021/06/12 00:03:43 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/06/16 14:12:43 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -16,8 +16,7 @@
 # include <string>
 
 class Book{
-
-public:
+private:
 	std::string	f_name;
 	std::string	l_name;
 	std::string	n_name;
@@ -29,7 +28,7 @@ public:
 	std::string	favmeal;
 	std::string	underwear;
 	std::string	darksecret;
-
+public:
 	Book(void);
 	Book(int index);
 	void display(int index)const;
