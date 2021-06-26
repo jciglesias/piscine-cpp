@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/06/26 00:22:23 by jiglesia          #+#    #+#             //
-//   Updated: 2021/06/26 18:35:52 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/06/26 19:22:04 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -42,8 +42,12 @@ void	Sed::replace(void) const
 
 	while (std::getline(ifs, tmp))
 	{
-		while ((found = tmp.find(this->_s1)) != std::string::npos)
+		if ((found = tmp.find(this->_s1)) != std::string::npos)
+		{
 			tmp.replace(found, this->_s1.length(), this->_s2);
+			while ((found = tmp.find(this->_s1, found + this->_s2.length())) != std::string::npos)
+				tmp.replace(found, this->_s1.length(), this->_s2);
+		}
 		ofs << tmp << std::endl;
 	}
 }
