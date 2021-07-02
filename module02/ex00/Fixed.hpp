@@ -6,14 +6,14 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/01 19:16:12 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/01 19:58:07 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/07/02 01:16:17 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
-#include <iostream>
+# include <iostream>
 
 class Fixed
 {
