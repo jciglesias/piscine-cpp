@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/07 15:00:35 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/09 00:10:41 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/07/09 19:28:33 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -23,6 +23,8 @@ public:
 	ScavTrap(ScavTrap const & src);
 	~ScavTrap(void);
 	void guardGate(void);
+protected:
+	int	_epoints;
 };
 
 #endif

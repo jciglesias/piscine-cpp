@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/08 18:47:28 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/09 01:24:20 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/07/09 19:36:04 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -14,12 +14,10 @@
 
 DiamondTrap::DiamondTrap(void) : ScavTrap(), FragTrap()
 {
+	_name = ClapTrap::_name;
 	ClapTrap::_name += "_clap_name";
-	_name = "DTrap";
 	_type = "DiamondTrap";
-	_hpoints = FragTrap::_hpoints;
-	_epoints = ScavTrap::_epoints;
-	_damage = FragTrap::_damage;
+	ClapTrap::_epoints = ScavTrap::_epoints;
 	std::cout << "The ScavTrap and FragTrap have been fusioned and";
 	std::cout << " became the DiamondTrap " << this->_name << std::endl;
 }
@@ -29,10 +27,8 @@ DiamondTrap::DiamondTrap(std::string n) : ScavTrap(n), FragTrap(n)
 	ClapTrap::_name = n + "_clap_name";
 	_name = n;
 	_type = "DiamondTrap";
-	_hpoints = FragTrap::_hpoints;
-	_epoints = ScavTrap::_epoints;
-	_damage = FragTrap::_damage;
-	std::cout << "The ScavTrap and FragTrap have been fused and";
+	ClapTrap::_epoints = ScavTrap::_epoints;
+	std::cout << "The ScavTrap and FragTrap merged and";
 	std::cout << " became the DiamondTrap " << this->_name << std::endl;
 }
 
@@ -44,15 +40,16 @@ DiamondTrap::DiamondTrap(DiamondTrap const & src)
 
 DiamondTrap::~DiamondTrap(void)
 {
-	std::cout << "DiamondTrap " << this->_name << " has been downgraded";
-	std::cout << " to a ClapTrap"<< std::endl;
+	std::cout << "DiamondTrap " << this->_name << " was divided into";
+	std::cout << " a ScavTrap and a FragTrap"<< std::endl;
+}
+
+void	DiamondTrap::whoAmI(void) const
+{
+	std::cout << "My name is " << this->_name << " " << ClapTrap::_name << std::endl;
 }
 
 void DiamondTrap::attack(std::string const & n)
 {
-	ClapTrap::attack(n);
+	ScavTrap::attack(n);
 }
-
-//void DiamondTrap::ClapTrap::takeDamage(unsigned int amount){}
-
-//void DiamondTrap::ClapTrap::beRepaired(unsigned int amount){}

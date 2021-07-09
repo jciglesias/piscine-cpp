@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/07 12:34:38 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/08 00:50:47 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/07/09 15:54:48 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -23,9 +23,9 @@ public:
 	ClapTrap(std::string n);
 	ClapTrap(ClapTrap const & src);
 	~ClapTrap(void);
-	void attack(std::string const & target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
+	virtual void attack(std::string const & target);
+	virtual void takeDamage(unsigned int amount);
+	virtual void beRepaired(unsigned int amount);
 protected:
 	std::string	_name;
 	std::string	_type;
