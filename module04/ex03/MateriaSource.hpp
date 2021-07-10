@@ -1,26 +1,32 @@
 // ************************************************************************** //
 //                                                                            //
 //                                                        :::      ::::::::   //
-//   Dog.cpp                                            :+:      :+:    :+:   //
+//   MateriaSource.hpp                                  :+:      :+:    :+:   //
 //                                                    +:+ +:+         +:+     //
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
-//   Created: 2021/07/09 21:26:01 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/10 14:47:50 by jiglesia         ###   ########.fr       //
+//   Created: 2021/07/10 21:09:32 by jiglesia          #+#    #+#             //
+//   Updated: 2021/07/10 21:38:02 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
-#include "Dog.hpp"
+#ifndef MATERIASOURCE_HPP
+# define MATERIASOURCE_HPP
 
-Dog::Dog(void)
+# include "IMateriaSource.hpp"
+
+class MateriaSource : public IMateriaSource
 {
-	type = "Dog";
-}
+public:
+	MateriaSource(void);
+	MateriaSource(MateriaSource const & src);
+	~MateriaSource(void);
+	virtual void learnMateria(AMateria *m);
+	virtual AMateria* createMateria(std::string const & type);
+protected:
+	AMateria	*materia[4];
+	int			msize;
 
-Dog::~Dog(void)
-{}
+};
 
-void	Dog::makeSound(void) const
-{
-	std::cout << "Woof Woof Woof..." << std::endl;
-}
+#endif

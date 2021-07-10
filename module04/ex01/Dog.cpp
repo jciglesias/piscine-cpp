@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/09 21:26:01 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/10 13:40:49 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/07/10 14:48:15 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -41,5 +41,5 @@ Dog::~Dog(void)
 
 void	Dog::makeSound(void) const
 {
-	std::cout << "Barf Barf Barf..." << std::endl;
+	std::cout << "Woof Woof Woof..." << std::endl;
 }
