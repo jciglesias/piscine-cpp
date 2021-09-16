@@ -5,21 +5,20 @@
 //                                                    +:+ +:+         +:+     //
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
-//   Created: 2021/07/10 18:39:04 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/10 20:53:26 by jiglesia         ###   ########.fr       //
+//   Created: 2021/07/12 11:57:41 by jiglesia          #+#    #+#             //
+//   Updated: 2021/09/16 14:53:48 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
 #include "Ice.hpp"
 
-Ice::Ice(void) : type("ice")
+Ice::Ice(void) : AMateria("ice")
 {
-	std::cout << "Ice was created" << std::endl;
+	std::cout << "Ice was cerated" << std::endl;
 }
 
-Ice::Ice(Ice const & src)
+Ice::Ice(Ice const & src) : AMateria(src)
 {
-	*this = src;
 	std::cout << "Ice was cloned" << std::endl;
 }
 
@@ -28,14 +27,13 @@ Ice::~Ice(void)
 	std::cout << "Ice was destroyed" << std::endl;
 }
 
-virtual AMateria Ice::clone(void) const
+AMateria *Ice::clone(void) const
 {
-	Ice	tmp(*this);
-
-	return tmp;
+	return new Ice();
 }
 
-virtual void Ice::use(ICharacter & target)
+
+void Ice::use(ICharacter & target)
 {
 	std::cout << "shoots an ice bolt at " << target.getName() <<std::endl;
 }

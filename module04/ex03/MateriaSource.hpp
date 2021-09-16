@@ -5,8 +5,8 @@
 //                                                    +:+ +:+         +:+     //
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
-//   Created: 2021/07/10 21:09:32 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/10 21:38:02 by jiglesia         ###   ########.fr       //
+//   Created: 2021/09/14 14:46:00 by jiglesia          #+#    #+#             //
+//   Updated: 2021/09/14 15:10:26 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -18,15 +18,13 @@
 class MateriaSource : public IMateriaSource
 {
 public:
-	MateriaSource(void);
-	MateriaSource(MateriaSource const & src);
-	~MateriaSource(void);
-	virtual void learnMateria(AMateria *m);
-	virtual AMateria* createMateria(std::string const & type);
+	MateriaSource();
+	~MateriaSource();
+	AMateria *createMateria(std::string const & type);
+	void learnMateria(AMateria *src);
 protected:
 	AMateria	*materia[4];
 	int			msize;
-
 };
 
 #endif

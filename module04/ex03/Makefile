@@ -6,7 +6,7 @@
 #    By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/01 18:54:39 by jiglesia          #+#    #+#              #
-#    Updated: 2021/07/10 21:37:38 by jiglesia         ###   ########.fr        #
+#    Updated: 2021/09/14 18:23:57 by jiglesia         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -22,7 +22,7 @@ INCLUDE		=	-I $(INC)
 
 DIRSRC		=	./src/
 
-SRC			=	main.cpp *.cpp
+SRC			=	main.cpp Ice.cpp Cure.cpp AMateria.cpp Character.cpp MateriaSource.cpp
 
 SRCS		=	$(SRC)
 

@@ -6,20 +6,19 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/10 18:53:14 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/10 20:54:12 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/09/16 15:16:07 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
 #include "Cure.hpp"
 
-Cure::Cure(void) : type("cure")
+Cure::Cure(void) : AMateria("cure")
 {
 	std::cout << "A cure was created" << std::endl;
 }
 
-Cure::Cure(Cure const & src)
+Cure::Cure(Cure const & src) : AMateria(src)
 {
-	*this = src;
 	std::cout << "Cure was cloned" << std::endl;
 }
 
@@ -28,14 +27,12 @@ Cure::~Cure(void)
 	std::cout << "A cure was destroyed" << std::endl;
 }
 
-virtual AMateria Cure::clone(void) const
+AMateria *Cure::clone(void) const
 {
-	Cure tmp(*this);
-
-	return tmp;
+	return new Cure();
 }
 
-virtual void Cure::use(ICharacter & target)
+void Cure::use(ICharacter & target)
 {
 	std::cout << " heals " << target.getName() << "\'s wounds" << std::endl;
 }
