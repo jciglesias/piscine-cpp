@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/09 21:21:26 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/09 21:57:57 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/09/17 13:47:02 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -20,7 +20,7 @@ WrongAnimal::~WrongAnimal(void)
 
 void	WrongAnimal::makeSound(void) const
 {
-	std::cout << "Wrong Animal" << std::endl;
+	std::cout << "Wrong Animal sound" << std::endl;
 }
 
 std::string	WrongAnimal::getType(void) const

@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/09 21:26:01 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/09 22:03:47 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/09/17 13:46:34 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -14,7 +14,7 @@
 
 WrongCat::WrongCat(void)
 {
-	type = "WrongCat";
+	type = "WrongCat was created";
 }
 
 WrongCat::~WrongCat(void)
