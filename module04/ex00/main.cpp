@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/09 21:32:51 by jiglesia          #+#    #+#             //
-//   Updated: 2021/09/17 13:45:56 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/09/17 13:56:52 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -35,8 +35,8 @@ int main()
 		const WrongAnimal* i = new WrongCat();
 
 		std::cout << i->getType() << " " << std::endl;
-		i->makeSound();//will output the cat sound!
-		//meta->makeSound();
+		i->makeSound();//will output the WrongAnimal sound!
+		meta->makeSound();
 		delete meta;
 		delete i;
 	}
