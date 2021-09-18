@@ -6,37 +6,35 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/09 21:26:01 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/10 13:53:46 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/09/18 15:26:03 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
 #include "Cat.hpp"
 
-Cat::Cat(void)
+Cat::Cat(void) : Animal("Cat")
 {
-	type = "Cat";
+	std::cout << "Cat constructor called" << std::endl;
 	brain = new Brain();
-	std::cout << "A cat was created" << std::endl;
 }
 
-Cat::Cat(Cat const & src)
+Cat::Cat(Cat const & src) : Animal("Cat")
 {
 	int i = 0;
 
-	type = "Cat";
+	std::cout << "IA was deep copied" << std::endl;
 	brain = new Brain();
 	while (i < 100)
 	{
 		brain->setIdea(src.brain->getIdea(i), i);
 		i++;
 	}
-	std::cout << "A cat was deep copied" << std::endl;
 }
 
 Cat::~Cat(void)
 {
+	std::cout << "Cat destructor called" << std::endl;
 	delete this->brain;
-	std::cout << "A cat was destroyed" << std::endl;
 }
 
 void	Cat::makeSound(void) const
