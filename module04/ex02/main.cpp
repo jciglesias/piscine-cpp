@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/09 21:32:51 by jiglesia          #+#    #+#             //
-//   Updated: 2021/09/18 15:36:25 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/09/18 15:41:25 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -33,7 +33,7 @@ int main()
 		delete i;
 		delete cpy;
 	}
-/*	{
+	{
 		const Animal	*animals[10];
 		int				i = 0;
 
@@ -45,5 +45,5 @@ int main()
 			animals[--i]->makeSound();
 		while (i < 10)
 			delete animals[i++];
-			}*/
+			}
 }
