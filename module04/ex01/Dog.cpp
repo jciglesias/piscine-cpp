@@ -6,37 +6,35 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/09 21:26:01 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/10 14:48:15 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/09/18 15:07:10 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
 #include "Dog.hpp"
 
-Dog::Dog(void)
+Dog::Dog(void) : Animal("Dog")
 {
-	type = "Dog";
+	std::cout << "Dog constructor called" << std::endl;
 	brain = new Brain();
-	std::cout << "A dog was created" << std::endl;
 }
 
-Dog::Dog(Dog const & src)
+Dog::Dog(Dog const & src) : Animal("Dog")
 {
 	int i = 0;
 
-	type = "Dog";
+	std::cout << "It was deep copied" << std::endl;
 	brain = new Brain();
 	while (i < 100)
 	{
 		brain->setIdea(src.brain->getIdea(i), i);
 		i++;
 	}
-	std::cout << "A dog was deep copied" << std::endl;
 }
 
 Dog::~Dog(void)
 {
+	std::cout << "Dog destructor called" << std::endl;
 	delete this->brain;
-	std::cout << "A dog was destroyed" << std::endl;
 }
 
 void	Dog::makeSound(void) const

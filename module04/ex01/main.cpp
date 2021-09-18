@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/09 21:32:51 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/10 13:51:08 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/09/18 15:16:08 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -19,19 +19,24 @@ int main()
 		const Animal* meta = new Animal();
 		const Animal* j = new Dog();
 		const Animal* i = new Cat();
-		const Dog	dog;
-		const Animal* cpy = new Dog(dog);
+		const Dog	*dog = new Dog();
+		const Dog cpy(*dog);
 
-		cpy->makeSound();
+		cpy.makeSound();
 		std::cout << j->getType() << " " << std::endl;
 		std::cout << i->getType() << " " << std::endl;
 		i->makeSound();//will output the cat sound!
 		j->makeSound();
 		meta->makeSound();
+		std::cout << "delete Animal meta: ";
 		delete meta;
+		std::cout << "delete Animal j: ";
 		delete j;
+		std::cout << "delete Animal i: ";
 		delete i;
-		delete cpy;
+		std::cout << "delete Dog dog: ";
+		delete dog;
+		std::cout << "delete Dog cpy: ";
 	}
 	{
 		const Animal	*animals[10];

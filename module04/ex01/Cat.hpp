@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/09 21:30:21 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/10 13:52:51 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/09/18 15:00:36 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -22,8 +22,8 @@ public:
 	Cat(void);
 	Cat(Cat const & src);
 	~Cat(void);
-	virtual void makeSound(void) const;
-protected:
+	void makeSound(void) const;
+private:
 	Brain *brain;
 };
 

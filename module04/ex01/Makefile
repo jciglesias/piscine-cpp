@@ -6,7 +6,7 @@
 #    By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/01 18:54:39 by jiglesia          #+#    #+#              #
-#    Updated: 2021/07/10 12:32:55 by jiglesia         ###   ########.fr        #
+#    Updated: 2021/09/18 13:08:38 by jiglesia         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -65,7 +65,7 @@ E0M			=	 "\e[0m"
 #************************ MAIN COMPILATION *************************
 
 $(NAME)	:		$(OBJS)
-				@$(CC)  $(INCLUDE) $(CFLAGS) -o $(NAME) $(OBJS) $(INC_LIB)
+				$(CC)  $(INCLUDE) $(CFLAGS) -o $(NAME) $(OBJS) $(INC_LIB)
 
 clean	:
 				@($(RM) $(OBJS))
