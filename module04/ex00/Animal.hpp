@@ -6,7 +6,7 @@
 //   By: jiglesia <jiglesia@student.42.fr>          +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2021/07/09 21:11:43 by jiglesia          #+#    #+#             //
-//   Updated: 2021/07/09 21:46:27 by jiglesia         ###   ########.fr       //
+//   Updated: 2021/09/18 13:11:50 by jiglesia         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -20,6 +20,7 @@ class Animal
 {
 public:
 	Animal(void);
+	Animal(std::string t);
 	~Animal(void);
 	virtual void makeSound(void) const;
 	std::string getType(void) const;
